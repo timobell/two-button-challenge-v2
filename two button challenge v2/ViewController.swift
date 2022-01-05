@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
+    var klick: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,19 @@ class ViewController: UIViewController {
         messageLabel.text = "wow"
         messageLabel.textColor = UIColor.gray
         messageLabel.textAlignment = .left
+    }
+    @IBAction func ab(_ sender: UIButton) {
+        if klick {
+            messageLabel.text = "drück oft und schnell,!!!RAINBOW!!!"
+            messageLabel.textAlignment = .right
+            messageLabel.textColor = .cyan
+            klick = false
+        }else {
+            messageLabel.text = "keine ahnung was ich schreiben soll"
+            messageLabel.textAlignment = .right
+            messageLabel.textColor = .orange
+            klick = true
+        }
     }
     
 }
