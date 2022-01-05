@@ -17,9 +17,13 @@ class ViewController: UIViewController {
 
     @IBAction func buttona(_ sender: UIButton) {
         messageLabel.text = "nice"
+        messageLabel.textColor = UIColor.blue
+        messageLabel.textAlignment = .right
     }
     @IBAction func buttonb(_ sender: UIButton) {
         messageLabel.text = "wow"
+        messageLabel.textColor = UIColor.gray
+        messageLabel.textAlignment = .left
     }
     
 }
